@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilal Alaa Alsubah, maker portfolio</title>
+<meta name="description" content="Aeronautical engineer and maker: flight control, embedded systems, computer vision and mechanical design. Projects by Bilal Alaa Alsubah.">
+<meta property="og:title" content="Bilal Alaa Alsubah, maker portfolio">
+<meta property="og:description" content="Flight control, embedded systems, computer vision and mechanical design.">
+<meta property="og:image" content="assets/img/qc32-bench.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F8F7;
+  --ink:#18222F;
+  --ink-soft:#4A5563;
+  --sky:#2E6DAE;
+  --sky-pale:#DCE8F4;
+  --earth:#93582B;
+  --rule:#D5DBDE;
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--sky);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-stretch:112%;line-height:1.12;margin:0}
+
+/* Hero */
+.hero{padding:72px 0 64px;border-bottom:1px solid var(--rule)}
+.hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-stretch:125%;font-weight:800;letter-spacing:-.015em}
+.hero .role{font-family:var(--display);font-weight:500;font-size:1.2rem;color:var(--ink-soft);margin:18px 0 0}
+.hero .lede{max-width:34em;margin:22px 0 0;font-size:1.125rem}
+.links{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:28px;font-family:var(--display);font-weight:500}
+.adi{width:100%;max-width:300px;justify-self:end}
+.adi .horizon{transform-origin:150px 150px;animation:settle 3.2s cubic-bezier(.3,.7,.3,1) .3s both}
+@keyframes settle{
+  0%{transform:rotate(22deg) translateY(-14px)}
+  30%{transform:rotate(-9deg) translateY(6px)}
+  55%{transform:rotate(4deg) translateY(-2px)}
+  78%{transform:rotate(-1.2deg) translateY(1px)}
+  100%{transform:rotate(0) translateY(0)}
+}
+@media (prefers-reduced-motion:reduce){.adi .horizon{animation:none}}
+
+/* Flagship */
+.flagship{padding:80px 0;border-bottom:1px solid var(--rule)}
+.kicker{font-family:var(--display);font-weight:500;color:var(--earth);font-size:1rem;margin:0 0 12px}
+.flagship .grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:start}
+.flagship h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700;max-width:18em}
+.flagship .text p{max-width:38em}
+.flagship figure{margin:0}
+.flagship figure img{width:100%;max-height:640px;object-fit:cover;border-radius:4px}
+.tools{font-family:var(--display);font-size:.95rem;color:var(--ink-soft);margin:14px 0 0}
+.facts{list-style:none;padding:0;margin:24px 0 0;border-left:3px solid var(--sky);}
+.facts li{padding:6px 0 6px 16px;font-size:1rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px;font-family:var(--display);font-weight:500}
+.video{margin-top:24px;aspect-ratio:16/9;width:100%;border:0;border-radius:4px;background:#000}
+
+/* Sections */
+.area{padding:72px 0 24px}
+.area h2{font-size:1.75rem;font-weight:700;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:40px;padding:40px 0;border-bottom:1px solid var(--rule)}
+.project:last-child{border-bottom:0}
+.project.no-media{grid-template-columns:minmax(0,1fr)}
+.project.no-media .body{max-width:44em}
+.project h3{font-size:1.3rem;font-weight:700}
+.project p{margin:12px 0 0;max-width:38em}
+.media{display:grid;gap:10px}
+.media.two{grid-template-columns:1fr 1fr}
+.media img{width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:4px;background:var(--sky-pale)}
+.media.two img{aspect-ratio:3/4}
+
+/* About */
+.about{padding:72px 0;background:var(--ink);color:#E9EEF2;margin-top:48px}
+.about .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.about h2{font-size:1.75rem;font-weight:700;margin-bottom:32px;color:#fff}
+.about h3{font-size:1.05rem;font-weight:700;color:#9CC3EA;margin-bottom:8px}
+.about p,.about ul{margin:0 0 18px;font-size:1rem}
+.about ul{padding-left:1.1em}
+.about a{color:#9CC3EA}
+footer{padding:28px 0;font-family:var(--display);font-size:.9rem;color:var(--ink-soft)}
+
+@media (max-width:860px){
+  .hero .wrap,.flagship .grid,.project,.about .grid{grid-template-columns:1fr;gap:28px}
+  .adi{justify-self:start;max-width:200px;order:-1}
+  .hero{padding:48px 0}
+  .flagship,.about{padding:56px 0}
+  .area{padding:56px 0 8px}
+  .project{padding:32px 0}
+  .flagship figure img{max-height:480px}
+}
+@media (max-width:420px){.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Bilal Alaa Alsubah</h1>
+      <p class="role">Aeronautical engineer and maker</p>
+      <p class="lede">I build things that fly, sense and move: flight control software, embedded electronics, computer vision and the 3D-printed parts that hold it all together. Most of what follows I designed, wired and tested myself.</p>
+      <nav class="links" aria-label="Contact">
+        <a href="mailto:bililalaa@gmail.com">bililalaa@gmail.com</a>
+        <a href="https://github.com/BilalJett">GitHub</a>
+        <a href="#about">Education and skills</a>
+      </nav>
+    </div>
+    <svg class="adi" viewBox="0 0 300 300" role="img" aria-label="Attitude indicator settling level">
+      <defs><clipPath id="dial"><circle cx="150" cy="150" r="138"/></clipPath></defs>
+      <g clip-path="url(#dial)">
+        <g class="horizon">
+          <rect x="-150" y="-150" width="600" height="300" fill="#2E6DAE"/>
+          <rect x="-150" y="150" width="600" height="300" fill="#93582B"/>
+          <line x1="-150" y1="150" x2="450" y2="150" stroke="#fff" stroke-width="3"/>
+          <g stroke="#fff" stroke-width="2" opacity=".85">
+            <line x1="125" y1="120" x2="175" y2="120"/><line x1="135" y1="135" x2="165" y2="135"/>
+            <line x1="125" y1="180" x2="175" y2="180"/><line x1="135" y1="165" x2="165" y2="165"/>
+          </g>
+        </g>
+      </g>
+      <circle cx="150" cy="150" r="138" fill="none" stroke="#18222F" stroke-width="10"/>
+      <g fill="#F2B233" stroke="#18222F" stroke-width="1.5">
+        <path d="M62 146h56l10 12h-14l-6-6H62z"/>
+        <path d="M238 146h-56l-10 12h14l6-6h46z"/>
+        <circle cx="150" cy="150" r="6"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <section class="flagship" id="qc32" aria-labelledby="flag-title">
+    <div class="wrap grid">
+      <div class="text">
+        <p class="kicker">Flagship project</p>
+        <h2 id="flag-title"></h2>
+        <p class="tools"></p>
+        <div class="summary"></div>
+        <ul class="facts"></ul>
+        <div class="actions"></div>
+      </div>
+      <figure></figure>
+    </div>
+  </section>
+
+  <div id="areas"></div>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">Education and skills</h2>
+      <div class="grid">
+        <div>
+          <h3>Education</h3>
+          <p>B.Sc. Aeronautical Engineering, University of Baghdad, 2026. Ranked 2nd in my graduating class.</p>
+          <p>Baghdad Ishik Boys College, 2021, applied branch.</p>
+          <h3>Languages</h3>
+          <p>Arabic (native), English (fluent, IELTS 8.0), Turkish (pre-intermediate).</p>
+        </div>
+        <div>
+          <h3>Control and embedded</h3>
+          <p>PID control, attitude estimation and sensor fusion, Betaflight internals, real-time control loops. Arduino, ESP32 and ESP32-S3, MPU6050/6500 IMUs, HX711 load cells, BLDC motors and ESCs, UART, USB-CDC, I2C, iBUS and custom binary serial protocols.</p>
+          <h3>Mechanical</h3>
+          <p>SolidWorks (parts, assemblies, airfoils), AutoCAD, 3D printing and design for manufacturing, ArtCAM for CNC machining. ASHRAE RTS cooling-load calculation.</p>
+        </div>
+        <div>
+          <h3>Software and data</h3>
+          <p>Python (NumPy, Pandas, Matplotlib, Streamlit, Dash, BeautifulSoup), Java for Android, C and C++, SQL (MySQL). OpenCV, MediaPipe, dlib, PyTorch, Tesseract OCR. FFT and signal time-alignment, PyInstaller, Git.</p>
+          <h3>Leadership</h3>
+          <p>Founded and ran a volunteer team for two years (<a href="https://instagram.com/ikhaa.vt">@ikhaa.vt</a>).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Bilal Alaa Alsubah, Baghdad. <a href="mailto:bililalaa@gmail.com">bililalaa@gmail.com</a></div></footer>
+
+<script src="projects.js"></script>
+<script>
+(function(){
+  const el=(t,c,txt)=>{const e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e};
+
+  function videoEmbed(url,title){
+    if(!url) return null;
+    const yt=url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);
+    if(yt){
+      const f=el('iframe','video');
+      f.src='https://www.youtube-nocookie.com/embed/'+yt[1];
+      f.title=title+' video';f.loading='lazy';f.allowFullscreen=true;
+      f.allow='accelerometer; encrypted-media; gyroscope; picture-in-picture';
+      return f;
+    }
+    const v=el('video','video');v.src=url;v.controls=true;v.preload='metadata';v.playsInline=true;
+    return v;
+  }
+  function actions(p){
+    const a=el('div','actions');
+    if(p.code){const l=el('a',null,'View the code');l.href=p.code;a.append(l)}
+    if(p.paper){const l=el('a',null,'Read the paper');l.href=p.paper;a.append(l)}
+    return a.children.length?a:null;
+  }
+  function factsList(p,ul){
+    ul=ul||el('ul','facts');
+    (p.facts||[]).forEach(f=>ul.append(el('li',null,f)));
+    return ul.children.length?ul:null;
+  }
+
+  // Flagship
+  const F=FLAGSHIP, fs=document.getElementById('qc32');
+  fs.querySelector('h2').textContent=F.title;
+  fs.querySelector('.tools').textContent=F.tools;
+  const sum=fs.querySelector('.summary');
+  [].concat(F.summary).forEach(t=>sum.append(el('p',null,t)));
+  const fl=fs.querySelector('.facts'); if(!factsList(F,fl)) fl.remove();
+  const fa=fs.querySelector('.actions'), act=actions(F);
+  if(act) fa.replaceWith(act); else fa.remove();
+  const fig=fs.querySelector('figure');
+  if(F.images&&F.images[0]){const i=el('img');i.src=F.images[0];i.alt=F.title;fig.append(i)}
+  const fv=videoEmbed(F.video,F.title); if(fv) fs.querySelector('.text').append(fv);
+  if(!fig.children.length) fig.remove();
+
+  // Areas
+  const root=document.getElementById('areas');
+  SECTIONS.forEach((s,si)=>{
+    const sec=el('section','area');sec.setAttribute('aria-labelledby','area-'+si);
+    const w=el('div','wrap');const h=el('h2',null,s.name);h.id='area-'+si;w.append(h);
+    s.projects.forEach(p=>{
+      const imgs=(p.images||[]).filter(Boolean);
+      const art=el('article','project'+(imgs.length?'':' no-media'));
+      const body=el('div','body');
+      body.append(el('h3',null,p.title));
+      if(p.tools) body.append(el('p','tools',p.tools));
+      [].concat(p.summary).forEach(t=>body.append(el('p',null,t)));
+      const fl=factsList(p); if(fl) body.append(fl);
+      const v=videoEmbed(p.video,p.title); if(v) body.append(v);
+      const a=actions(p); if(a) body.append(a);
+      if(imgs.length){
+        const m=el('div','media'+(imgs.length>1?' two':''));
+        imgs.slice(0,2).forEach((src,k)=>{const i=el('img');i.src=src;i.alt=p.title+(k?' (detail)':'');i.loading='lazy';m.append(i)});
+        art.append(m);
+      }
+      art.append(body);w.append(art);
+    });
+    sec.append(w);root.append(sec);
+  });
+})();
+</script>
+</body>
+</html>
